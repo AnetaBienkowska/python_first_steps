@@ -1,0 +1,7 @@
+def temp_converter(cel):
+    return (cel * 9/5) + 32
+
+while True:
+    cel = float(input("Celcius temperature: "))
+    fahr = temp_converter(cel)
+    print(f"{cel} Celcius degrees is {fahr:.2f} Fahrenheit degrees")
