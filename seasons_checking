@@ -1,0 +1,22 @@
+month_list = [['December','January','February'],['March','April','May'], ['June','July','August'], ['September','October','November']]
+
+print("MONTHS LIST")
+for x in month_list:
+    if type(x) is list:
+        for y in x:
+            print(y)
+    
+while True:
+    month = input("\nEnter month: ")  
+
+    if month in month_list[0]:
+        print("It's winter")
+    elif month in month_list[1]:
+        print("It's spring")
+    elif month in month_list[2]:
+        print("It's summer")   
+    elif month in month_list[3]:
+        print("It's autumn") 
+    else:
+        print("Incorrect value")
+    break
