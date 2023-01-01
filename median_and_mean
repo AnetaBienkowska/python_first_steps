@@ -1,0 +1,12 @@
+from statistics import median
+from statistics import mean
+
+a = float(input("Enter first number: "))
+b = float(input("Enter second number: "))
+c = float(input("Enter third number: "))
+
+mean_result = mean([a,b,c])
+print(f"Mean is {mean_result:.2f}")
+
+median_result = median([a,b,c])
+print(f"Median is {median_result:.2f}")
