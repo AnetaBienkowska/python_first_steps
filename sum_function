@@ -1,0 +1,9 @@
+def sum_in_list(x) :
+    sum_in_list = 0
+
+    for y in x:
+        sum_in_list = sum_in_list + y
+    return sum_in_list
+
+my_sum = sum_in_list([1,2,3])     
+print(my_sum)
