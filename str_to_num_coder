@@ -1,0 +1,6 @@
+def coder(str_value):
+    num_value = ord(str_value)
+    return num_value
+
+code = coder('b')
+print(code)
