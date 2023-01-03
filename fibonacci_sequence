@@ -1,0 +1,11 @@
+def fibonacci(length):
+    first = 0
+    second = 1
+    print(first, second, end = " ")
+    length -= 2
+    for i in range(0,length):
+        print(first + second, end=" ")
+        first, second = second, first + second 
+    
+print("Fibonacci sequence: ")  
+fibonacci(5)
