@@ -1,0 +1,15 @@
+even_counter = 0
+odd_counter = 0
+
+while True:
+    '''user enter random numbers'''
+    num = int(input("Enter a number: "))
+    if num != 0:
+        if num % 2 == 0:
+            even_counter += 1
+        else:
+            odd_counter += 1
+    else:
+        ''' after entering "0" program counted even and odd numbers entered by the user '''
+        print(f"You entered {even_counter} even numbers and {odd_counter} odd numbers until you entered zero")
+        break
