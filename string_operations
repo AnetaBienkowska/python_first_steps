@@ -1,0 +1,29 @@
+# printing number of each elements (without repetition)
+entered_string = input("Enter random string:  ")
+length = len(entered_string)
+sorted_set = sorted(set(entered_string))
+
+print("Letter counter:")                  
+for i in sorted_set:
+    amount = entered_string.count(i)    
+    print(f"{i} - {amount}")
+    
+print(f"Your string has {length} signs")
+
+# first two and last two signs printed if length more than 2
+if length > 2:
+    print(f"\nFirst two signs: {entered_string[0]}{entered_string[1]}")
+    print("Last two signs: {}{}".format(entered_string[-2],entered_string[-1])) #negative indexing not supported by f-string 
+else:
+    print("")
+    
+# changing the repetition to @
+s_list = []
+for i in entered_string:
+    if i not in s_list:
+        s_list.append(i)
+    else:
+        s_list.append("@")
+
+new_string = "".join(s_list)
+print(f"\nAfter replacing the repetitions to @: {new_string}")   
