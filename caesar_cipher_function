@@ -1,0 +1,12 @@
+def caesar_cipher(sentence, key):
+    encrypted = ""
+    for letter in sentence:
+        if ord(letter) + key > ord("z"):
+            encrypted += chr(ord(letter) + key - 26)
+        else:
+            encrypted += chr(ord(letter) + key)
+    return encrypted
+
+sentence = input("Enter sentence to encrypt: ")
+key = input("Enter key value: )
+print("Your coded sentence:", caesar_cipher(sentence,key)) 
