@@ -1,0 +1,15 @@
+import matplotlib.pyplot as plt
+
+
+def my_plot(x,y):
+    plt.plot(x,y,'g--')
+    plt.xlabel("X axis")
+    plt.ylabel("Y axis")
+    plt.title("My first plot")
+    plt.show()
+    
+    
+x = [1,4,5,7]
+y = [2,4,8,9]
+
+my_plot(x,y)
