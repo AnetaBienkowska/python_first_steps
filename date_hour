@@ -1,5 +1,6 @@
-from datetime import date
 from datetime import datetime 
 
-print(date.today()) #date yy-mm-dd
-print(datetime.now()) #date and hour
+def today():
+  print(datetime.now())
+  
+today()
