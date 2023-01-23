@@ -1,6 +1,0 @@
-x = range(1,10,4)
-y = []
-for z in x:
-    if z % 3:
-        y.append(z)
-print(y)
