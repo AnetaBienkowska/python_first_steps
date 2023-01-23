@@ -1,6 +1,13 @@
-x = range(1,10,4)
-y = []
-for z in x:
-    if z % 3:
-        y.append(z)
-print(y)
+def list_creator(min, max, step):
+    x = []
+    for y in range(min, max + 1, step):
+        if True:
+            x.append(y)
+    return x
+
+min = int(input("Enter min value: "))
+max = int(input("Enter max value: "))
+step = int(input("Enter step: "))
+
+result = list_creator(min, max, step)
+print(result)
