@@ -1,3 +1,6 @@
+def multiplication_to_10(number):     
+    for i in range(1,11):
+        print(f"{i:2} * {number} =", i * number)
+    
 number = int(input("Enter value: "))
-for i in range(1,11):
-    print(f"{i:2} * {number} =", i * number)
+multiplication_to_10(number)
