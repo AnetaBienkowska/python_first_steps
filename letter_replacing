@@ -1,11 +1,16 @@
+def letter_replacement(name, surname):
+
+    new_name = name.replace(name[0],surname[0])
+    new_name = new_name.replace(name[1],surname[1])
+
+    new_surname = surname.replace(surname[0],name[0])
+    new_surname = new_surname.replace(surname[1],name[1])
+    return new_name, new_surname
+
 name = input("Enter your name: ")
 surname = input("Enter your surname: ")
-print(f"Your data: {name} {surname}")
+result = letter_replacement(name, surname)
 
-new_name = name.replace(name[0],surname[0])
-new_name = new_name.replace(name[1],surname[1])
-
-new_surname = surname.replace(surname[0],name[0])
-new_surname = new_surname.replace(surname[1],name[1])
-
-print(f"After replacing: {new_name} {new_surname}")
+print(f"Your current name and surname: \n{name} {surname}")
+print(f"After letter replacement: ")
+print(" ".join(result))
