@@ -1,0 +1,85 @@
+import random
+from statistics import median
+
+list = []
+for i in range(50):
+    list.append(random.randint(1, 1001))
+print("Random list:\n", list)
+
+sum = 0
+for i in list:
+    sum += i
+print(f"Sum of the values from the list: {sum}")
+print("Max value from the list: ", max(list))
+print("Min value from the list: ", min(list))
+print("Median of the elements: ", median(list))
+
+list.sort()
+print(f"First 20 elements of the sorted list: {list[0:21]}")
+
+new_list = []
+for i in list:
+    if len(str(i)) == 3:
+        new_list.append(i)
+print(f"There is {len(new_list)} elements in range <100,999>")
+
+duplicates = []
+for i in list:
+    if list.count(i) > 1:
+        if i not in duplicates:
+            duplicates.append(i)
+if len(duplicates) == 0:
+    print("There is no duplicates in the list")
+else:
+    print(f"Duplicated elements: {duplicates}")
+
+
+for i in list:
+    if "21" in str(i):
+        with_21_counter += 1
+print(f"Elements with '21': {with_21_counter}")
+
+more_than_800_counter = 0
+odd_counter = 0
+even_counter = 0
+with_21_counter = 0
+odd_list = []
+even_list = []
+for i in list:
+    if i > 800:
+        more_than_800_counter += 1
+    if i % 2 == 0:
+        even_counter += 1
+        even_list.append(i)
+    else:
+        odd_counter += 1
+        odd_list.append(i)
+    if "21" in str(i):
+        with_21_counter += 1
+
+print(f"More than 800: {more_than_800_counter}")
+print(
+    f"There are {even_counter} even elements and {odd_counter} odd elements in this list")
+print(f"Elements with '21': {with_21_counter}")
+
+even_list.sort()
+odd_list.sort(reverse=True)
+special_list = even_list + odd_list
+print("Sorted even ascending and odd descending list: ", special_list)
+
+print("Shuffeled list:")
+random.shuffle(list)
+print(list)
+
+print("*" * 150)
+
+print("Enter random range ")
+user_min = int(input("Min value: "))
+user_max = int(input("Max value: "))
+
+counter_range = 0
+for i in list:
+    if i in range(user_min, user_max + 1):
+        counter_range += 1
+
+print(f"There is {counter_range} elements from the main list in your range")
