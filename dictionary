@@ -1,0 +1,10 @@
+products = {"product1": 5.45, "product2": 1.2, "product3": 2.22, "product4": 10.5, "product5": 12.6,
+            "product6": 1.0, "product7": 45.4, "product8": 9.99, "product9": 0.99, "product10": 14.5}
+
+my_values = list(products.values())
+my_values.sort(reverse=True)
+values_list = my_values[:3]
+print("Three max prices:")
+for key, value in products.items():
+    if value in values_list:
+        print(f"{key} {value}")
