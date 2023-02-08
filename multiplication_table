@@ -1,6 +1,13 @@
-def multiplication_to_10(number):     
-    for i in range(1,11):
+def multiplication_to_10(number: int) -> int:
+    """
+    The function returned multiplication table in range 0-10 for entered `number`.
+
+    Args:
+        number (int): Number to multiplicate in range 0-10.
+    """
+    for i in range(1, 11):
         print(f"{i:2} * {number} =", i * number)
-    
+
+
 number = int(input("Enter value: "))
 multiplication_to_10(number)
