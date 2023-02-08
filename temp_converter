@@ -1,7 +1,17 @@
-def temp_converter(cel):
+def temp_converter(cel: float) -> float:
+    """
+    The function to convert temperatures in degrees Celsius to Fahrenheit.
+
+    Args:
+        cel (float): Temperature in Celsius degrees [°C] entered by the user.
+
+    Returns:
+        float: Temperature converted to Fahrenheit [°F].
+    """
     return (cel * 9/5) + 32
+
 
 while True:
     cel = float(input("Celcius temperature: "))
     fahr = temp_converter(cel)
-    print(f"{cel} Celcius degrees is {fahr:.2f} Fahrenheit degrees")
+    print(f"{cel} °C = {fahr:.2f} °F")
