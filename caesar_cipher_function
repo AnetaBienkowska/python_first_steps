@@ -11,10 +11,13 @@ def caesar_cipher(sentence: str, key: int) -> str:
     """
     encrypted = ""
     for letter in sentence:
-        if ord(letter) + key > ord("z"):
-            encrypted += chr(ord(letter) + key - 26)
-        else:
-            encrypted += chr(ord(letter) + key)
+        if letter != " ":
+            if ord(letter) + key > ord("z"):
+                encrypted += chr(ord(letter) + key - 26)
+            else:
+                encrypted += chr(ord(letter) + key)
+        elif letter == " ":
+            encrypted += letter
     return encrypted
 
 
