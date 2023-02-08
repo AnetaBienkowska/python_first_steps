@@ -1,6 +1,24 @@
-def coder(str_value):
-    num_value = ord(str_value)
-    return num_value
+import string
 
-code = coder('b')
-print(code)
+def coder(str_value: str = "") -> int:
+    """
+    The function returns an integer representing the Unicode character of `str_value`.
+
+    Args:
+        str_value (str): Single parameter entered by the user.
+
+    Returns:
+        int: Integer representing the entered string value.
+    """
+    num_value = None
+
+    while True:
+        str_value = input("Enter random letter to code: ")
+        if str_value in string.ascii_letters and len(str_value) == 1:
+            num_value = ord(str_value)
+            print(
+                f"Letter: {str_value} is coded to: {num_value}")
+        else:
+            print("Incorrect value. Please enter one letter.")
+
+coder()
