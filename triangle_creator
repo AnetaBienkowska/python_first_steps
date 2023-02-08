@@ -1,13 +1,22 @@
-def triangle(a,b,c):
-    my_list = [a,b,c] 
+def triangle(a: float, b: float, c: float) -> str:
+    """
+    The function check if we can create triangle using `a`, `b`, `c` values given by the user.
+
+    Args:
+        a (float): First side of the triangle.
+        b (float): Second side of the triangle.
+        c (float): Third side of the triangle.
+    """
+    my_list = [a, b, c]
     max_value = max(my_list)
     if max_value < (sum(my_list) - max_value):
         print("Triangle can be created")
     else:
         print("Change the values to create a triangle")
-    
-a = int(input("Enter first number: "))
-b = int(input("Enter second number: "))
-c = int(input("Enter third number: "))
 
-triangle(a,b,c)
+
+a = float(input("Enter first side value: "))
+b = float(input("Enter second side value: "))
+c = float(input("Enter third side value: "))
+
+triangle(a, b, c)
