@@ -1,11 +1,19 @@
-def fibonacci(length):
+def fibonacci(length: int) -> int:
+    """
+    The function return fibonacci sequence of given `length`.
+
+    Args:
+        length (int): The length of the sequence, entered by user.
+    """
     first = 0
     second = 1
-    print(first, second, end = " ")
+    print(first, second, end=" ")
     length -= 2
-    for i in range(0,length):
+    for i in range(0, length):
         print(first + second, end=" ")
-        first, second = second, first + second 
-    
-print("Fibonacci sequence: ")  
-fibonacci(5)
+        first, second = second, first + second
+
+
+length = int(input("Enter the length of the sequence:"))
+print("Your fibonacci sequence: ")
+fibonacci(length)
