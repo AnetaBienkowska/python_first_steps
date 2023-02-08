@@ -1,5 +1,6 @@
 import string
 
+
 def coder(str_value: str = "") -> int:
     """
     The function returns an integer representing the Unicode character of `str_value`.
@@ -10,15 +11,18 @@ def coder(str_value: str = "") -> int:
     Returns:
         int: Integer representing the entered string value.
     """
-    num_value = None
-
     while True:
-        str_value = input("Enter random letter to code: ")
+        str_value = input(
+            "Enter random letter to code (or type 'esc' to exit): ")
         if str_value in string.ascii_letters and len(str_value) == 1:
             num_value = ord(str_value)
             print(
                 f"Letter: {str_value} is coded to: {num_value}")
+        elif str_value == "esc":
+            print("Program ended")
+            break
         else:
             print("Incorrect value. Please enter one letter.")
+
 
 coder()
