@@ -1,4 +1,14 @@
-def caesar_cipher(sentence, key):
+def caesar_cipher(sentence: str, key: int) -> str:
+    """
+    The function encrypt a `sentence` given by user replacing the letters according to the given `key`.
+
+    Args:
+        sentence (str): The sentence entered by user.
+        key (int): The key entered by user - value by which we shift the letters in the sequence.
+
+    Returns:
+        str: The coded sentence.
+    """
     encrypted = ""
     for letter in sentence:
         if ord(letter) + key > ord("z"):
@@ -7,6 +17,7 @@ def caesar_cipher(sentence, key):
             encrypted += chr(ord(letter) + key)
     return encrypted
 
+
 sentence = input("Enter sentence to encrypt: ")
-key = input("Enter key value: )
-print("Your coded sentence:", caesar_cipher(sentence,key)) 
+key = int(input("Enter key value: "))
+print("Your coded sentence:", caesar_cipher(sentence, key))
