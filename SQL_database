@@ -1,0 +1,28 @@
+import psycopg2 as pg2
+
+conn = pg2.connect(database='exercises', user='postgres', password='password')
+cur = conn.cursor()
+
+query1 = '''
+        CREATE TABLE next_table (
+            user_id INTEGER,
+            tmstmp TIMESTAMP,
+            type VARCHAR(10)
+        );
+        '''
+
+cur.execute(query1)
+query2 = '''
+        INSERT INTO next_table (user_id,tmstmp,type)
+        VALUES
+        (1, CURRENT_TIMESTAMP, 'sth'),
+        (2, CURRENT_TIMESTAMP, 'other')
+        ;
+        '''
+
+cur.execute(query2)
+cur.execute('SELECT * FROM next_table')
+data = cur.fetchall()
+print(data)
+conn.commit()
+conn.close()
